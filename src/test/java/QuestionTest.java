@@ -6,20 +6,17 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
-
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class SamokatTest {
+public class QuestionTest {
     private WebDriver webDriver;
     private final String correctText;
     private int index;
 
-    public SamokatTest (String correctText, int index) {
+    public QuestionTest(String correctText, int index) {
         this.correctText = correctText;
         this.index = index;
     }
@@ -41,7 +38,7 @@ public class SamokatTest {
         webDriver = new ChromeDriver();
         webDriver.manage().timeouts().implicitlyWait(Duration.of(3, ChronoUnit.SECONDS));
     }
-   //https://qa-scooter.praktikum-services.ru/
+
     @Test
     public void checkAllQuestions() {
 
